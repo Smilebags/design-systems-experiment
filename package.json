@@ -1,0 +1,31 @@
+{
+    "name": "scss-pug-ts-project-template",
+    "version": "1.0.0",
+    "description": "project template for development using typescript, scss, pug, and gulp and browsersync as dev tools",
+    "main": "index.js",
+    "dependencies": {
+        "typescript": "^2.5.3"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.18.13",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^4.0.0",
+        "gulp-clean-css": "^3.9.0",
+        "gulp-minify": "^1.0.0",
+        "gulp-pug": "^3.3.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^3.1.0",
+        "gulp-sourcemaps": "^2.6.1",
+        "gulp-typescript": "^3.2.3",
+        "gulp-util": "^3.0.8",
+        "vinyl-ftp": "^0.6.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "gulp dev-watch",
+        "build": "gulp build",
+        "deploy": "gulp deploy"
+    },
+    "author": "Christopher Cook",
+    "license": "ISC"
+}
