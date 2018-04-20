@@ -1,3 +1,7 @@
+//- new features used/learned
+//-     Custom Elements
+//-     CSS Custom properties
+//-     backdrop-filter
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -8,4 +12,30 @@ html(lang="en")
         script(src="/scripts/main.js")
         title Document
     body
-        h1 Hello World!
+        .banner
+            h1 Design System Experimentation
+        .grid-1.md-grid-2.padding
+            div
+                h2 Microsoft Fluent Design
+                h3 'Acrylic' settings panel
+                p The settings panel features Microsoft's <em>Acrylic</em> material which is used throughout Windows 10. It will look strange in all browsers except for <b>Google Chrome</b> right now because it is the only one to support <a href="https://caniuse.com/#feat=css-backdrop-filter"><code>backdrop-filter</code></a>. It'll be coming in the next version of Edge.
+                p Press save to hide the panel and push your cursor to the right of the window to bring it back
+            div
+                h2 Google Material Design
+                p Material design is based on an imaginary physical material with very specific properties.
+                p It utilises depth and shows that with the use of shadows. I've played with CSS vars to set up the 'environment' in which they cast shadows in to.
+                p Hover over the boxes
+                .box.shadow
+                    p
+                        b SMILE
+                .box.shadow.floating
+                    p
+                        b BE HAPPY
+        img(src="/img/Stadium.jpg", alt="")
+        .settings-bar.changed
+            .container
+                h2 Settings
+                h3 Theme
+                p The checkbox below is a Custom Element registered with JS. Try interacting with it.
+                theme-picker(text="Test")
+                p.btn.save Save 

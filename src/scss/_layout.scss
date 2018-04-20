@@ -1,0 +1,88 @@
+// grid from and to classes
+@for $i from 1 through 12 {
+    .from-#{$i} {
+        grid-column-start: $i;
+    }
+    .to-#{$i} {
+        grid-column-end: $i;
+    }
+    .span-#{$i} {
+        grid-column: span $i;
+    }
+}
+
+// grid
+@for $i from 1 through 12 {
+    .grid-#{$i} {
+        display: grid;
+        grid-template-columns: repeat($i, 1fr);
+        grid-gap: var(--base-spacing);
+        .no-spacing {
+            grid-gap: 0;
+        }
+    }
+}
+
+// order
+@for $i from -3 through 12 {
+    .order-#{$i} {
+        order: $i;
+    }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+    // to and from
+    @for $i from 1 through 12 {
+        .md-from-#{$i} {
+            grid-column-start: $i;
+        }
+        .md-to-#{$i} {
+            grid-column-end: $i;
+        }
+    }
+    // grid
+    @for $i from 1 through 12 {
+        .md-grid-#{$i} {
+            display: grid;
+            grid-template-columns: repeat($i, 1fr);
+            grid-gap: var(--base-spacing);
+            @for $j from $i through 12 {
+                >.span-#{$j} {
+                    grid-column: -1 / 1;
+                }
+            }
+        }
+    }
+    // order
+    @for $i from -3 through 12 {
+        .md-order-#{$i} {
+            order: $i;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    // to and from
+    @for $i from 1 through 12 {
+        .lg-from-#{$i} {
+            grid-column-start: $i;
+        }
+        .lg-to-#{$i} {
+            grid-column-end: $i;
+        }
+    }
+    // grid
+    @for $i from 1 through 12 {
+        .lg-grid-#{$i} {
+            display: grid;
+            grid-template-columns: repeat($i, 1fr);
+            grid-gap: var(--base-spacing);
+        }
+    }
+    // order
+    @for $i from -3 through 12 {
+        .lg-order-#{$i} {
+            order: $i;
+        }
+    }
+}
