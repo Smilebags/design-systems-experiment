@@ -1,3 +1,8 @@
+# Design systems and Custom Elements
+This repository is a look into a few design systems (Microsoft's Fluent Design and Google's Material Design) and uses a new JS feature, Custom Elements. It only works correctly in Chrome right  (behind the experimental features flag), since Chrome is the only browser to support both `backdrop-filter` and `custom elements`. 
+
+[See live preview](https://smilebags.github.io/design-systems-experiment)
+
 # Tech
 The technology used in this template is as follows
 - typescript
